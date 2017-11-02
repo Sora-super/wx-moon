@@ -28,8 +28,7 @@
     margin: 4%;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 250rpx;
     margin: auto;
     li{
       width: 100%;
@@ -126,9 +125,19 @@
             wx.redirectTo({
               url: 'welcome'
             })
+          } else {
+            wx.showToast({
+              title: '登录失败',
+              icon: 'fail',
+              duration: 2000
+            })
           }
         } else {
-          console.log('失败')
+          wx.showToast({
+            title: '登录失败',
+            icon: 'fail',
+            duration: 2000
+          })
         }
       },
       inputUser: function (e) {
