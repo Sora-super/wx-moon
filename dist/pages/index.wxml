@@ -12,11 +12,11 @@
         </div>
       </li>
       <li>
-        <input placeholder="请输入您的微信名称" auto-focus/>
+        <input placeholder="请输入您的微信名称" name="user" bindinput="inputUser" auto-focus/>
       </li>
       <li>
-        <input placeholder="请向相关人员获取密码" auto-focus/>
+        <input placeholder="请向相关人员获取密码" name="psd" bindinput="inputPwd" auto-focus/>
       </li>
-      <li>登录</li>
+      <li bindtap="login">登录</li>
     </ul>
   </view>

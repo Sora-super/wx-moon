@@ -1,4 +1,7 @@
 <style lang="less">
+page{
+  height:100%;
+}
 .container {
   height: 100%;
   display: flex;
@@ -16,11 +19,12 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/index'
+      'pages/index',
+      'pages/welcome'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: 'rgb(92,142,139)',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
     }

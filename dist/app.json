@@ -1,1 +1,1 @@
-{"pages":["pages/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}}
+{"pages":["pages/index","pages/welcome"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"rgb(92,142,139)","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}}
