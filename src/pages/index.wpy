@@ -85,10 +85,10 @@
         </div>
       </li>
       <li>
-        <input placeholder="请输入您的微信名称" name="user" bindinput="inputUser" auto-focus/>
+        <input placeholder="请输入您的微信名称" name="user" bindinput="inputUser"/>
       </li>
       <li>
-        <input placeholder="请向相关人员获取密码" name="psd" bindinput="inputPwd" auto-focus/>
+        <input placeholder="请向相关人员获取密码" name="psd" bindinput="inputPwd"/>
       </li>
       <li @tap="login">登录</li>
     </ul>
