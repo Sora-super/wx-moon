@@ -1,7 +1,1 @@
-@import "./../npm/wepy-com-toast/toast.wxss";
-@import "./../components/group.wxss";
-@import "./../components/list.wxss";
-@import "./../components/counter.wxss";
-@import "./../components/counter.wxss";
-@import "./../components/panel.wxss";
-.userinfo{display:flex;flex-direction:column;align-items:center}.userinfo-avatar{width:80rpx;height:80rpx;border-radius:50%}.userinfo-nickname{color:#aaa}
+.container{font-size:14px}.container .userinfo{display:flex;flex-direction:column;align-items:center}.container .userinfo-avatar{width:80rpx;height:80rpx;border-radius:50%}.container .userinfo-nickname{color:#aaa}.container .index{display:flex;width:96%;height:500rpx;margin:2%;flex-direction:column;position:fixed;top:0;bottom:0;margin:auto}.container .index li{width:100%;height:100rpx;margin:5rpx 0;display:flex;justify-content:center;align-items:center}.container .index li input{width:100%;height:100%}.container .index li:nth-child(1){height:200rpx}.container .index li:nth-child(1) div{width:150rpx;height:150rpx;border-radius:50%;overflow:hidden}.container .index li:nth-child(1) div .headImg{width:100%;height:100%}
