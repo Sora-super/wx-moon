@@ -1,4 +1,18 @@
 
   <view class="container">
-      <div> 恭喜你 登陆成功</div>
+      <div class="welcome-swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block  wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </div>
+      <div class="welcome-title">
+          <span class="welcome-title_name">我是名字</span>  
+      </div>
+      <ul class="welcome-con">
+          <li class="welcome-con_li">123</li>
+      </ul>
   </view>

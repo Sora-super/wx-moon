@@ -7,7 +7,7 @@ page{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+
   box-sizing: border-box;
 }
 </style>
@@ -19,13 +19,13 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/index',
-      'pages/welcome'
+      'pages/welcome',
+      'pages/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: 'rgb(92,142,139)',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '天涯明月刀',
       navigationBarTextStyle: 'black'
     }
   }
