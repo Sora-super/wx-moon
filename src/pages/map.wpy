@@ -1,0 +1,161 @@
+<style lang="less">
+.container{
+  width: 100%;
+  height: 100%;
+  background:  url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNOsRW_5edwhN9npJOF656EGjC2IXM4vM6EVlQNKbhelp1GArsEw") no-repeat  fixed;
+  background-size: 100% 100%;  
+  font-size: 14px;
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userinfo-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+  }
+
+  .userinfo-nickname {
+    color: #aaa;
+  }
+  .index{
+  
+    display: flex;
+    width: 96%;
+    height: 500rpx;
+    margin: 4%;
+    flex-direction: column;
+    position: fixed;
+    top: 250rpx;
+    margin: auto;
+    li{
+      width: 100%;
+      height: 100rpx;
+      margin: 5rpx 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(99,103,106,0.5);
+      color: white;
+      input{
+     
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+    }
+    li:nth-child(1){
+      height: 200rpx;
+      background: none;
+      div{
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2rpx solid rgb(92,142,139);
+        
+        .headImg{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    li:nth-child(4){
+      background: rgba(77,100,116,0.5);
+    }
+  }
+   
+ 
+}
+</style>
+<template>
+  <view class="container">
+    <!-- <view class="userinfo" @tap="handleViewTap">
+      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
+      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
+    </view>
+    <div @tap="textTap">{{text}}</div> -->
+    <ul class="index">
+      <li>
+        <div>
+          <image class="headImg" src="{{ userInfo.avatarUrl }}" alt="" />
+        </div>
+      </li>
+      <li>
+        <input placeholder="请输入您的微信名称" name="user" bindinput="inputUser"/>
+      </li>
+      <li>
+        <input placeholder="请向相关人员获取密码" name="psd" bindinput="inputPwd"/>
+      </li>
+      <li @tap="login">登录</li>
+    </ul>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '菩提本无树'
+    }
+    components = {
+    }
+
+    data = {
+      userInfo: {
+        nickName: '加载中...'
+      },
+      text: '这是一个点击会变的字体',
+      user: '',
+      psd: ''
+    }
+
+    methods = {
+      textTap () {
+        this.text = '我已经变了'
+      },
+      login () {
+        console.log(this.userInfo.nickName)
+        if (this.user === this.userInfo.nickName) {
+          if (this.psd === '453570847') {
+            // 登陆成功 跳转至下一个界面
+            wx.redirectTo({
+              url: 'welcome'
+            })
+          } else {
+            wx.showToast({
+              title: '登录失败',
+              icon: 'fail',
+              duration: 2000
+            })
+          }
+        } else {
+          wx.showToast({
+            title: '登录失败',
+            icon: 'fail',
+            duration: 2000
+          })
+        }
+      },
+      inputUser: function (e) {
+        this.user = e.detail.value
+      },
+      inputPwd: function (e) {
+        this.psd = e.detail.value
+      }
+    }
+
+    onLoad() {
+      let self = this
+      this.$parent.getUserInfo(function (userInfo) {
+        if (userInfo) {
+          self.userInfo = userInfo
+        }
+        self.$apply()
+      })
+    }
+  }
+</script>

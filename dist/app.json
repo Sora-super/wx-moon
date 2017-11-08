@@ -1,1 +1,1 @@
-{"pages":["pages/welcome","pages/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"rgb(92,142,139)","navigationBarTitleText":"天涯明月刀","navigationBarTextStyle":"black"}}
+{"pages":["pages/welcome","pages/index","pages/map"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"rgb(92,142,139)","navigationBarTitleText":"天涯明月刀","navigationBarTextStyle":"black"}}

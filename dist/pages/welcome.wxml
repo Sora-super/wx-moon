@@ -12,7 +12,24 @@
       <div class="welcome-title">
           <span class="welcome-title_name">我是名字</span>  
       </div>
-      <ul class="welcome-con">
-          <li class="welcome-con_li">123</li>
-      </ul>
+      
+      <div class="welcome-con">
+          <li class="welcome-con_li"  wx:for="{{listData}}">
+              <div class="welcome-con_li-left">
+                <div class="welcome-con_li-left-img">
+                  <image src="{{item.img}}"/>
+                </div>
+              </div>
+              <div class="welcome-con_li-right">{{item.title}}</div>
+          </li>
+      </div>
+     
+     <div class="welcome-title">
+          <span class="welcome-title_name">我是名字我是名字</span>  
+      </div>
+      <div class="ceshi">
+            <div bindclick="map">地图</div>
+      </div>
+       
+  
   </view>

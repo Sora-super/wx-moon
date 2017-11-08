@@ -1,0 +1,22 @@
+
+  <view class="container">
+    <!-- <view class="userinfo" bindtap="handleViewTap">
+      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
+      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
+    </view>
+    <div bindtap="textTap">{{text}}</div> -->
+    <ul class="index">
+      <li>
+        <div>
+          <image class="headImg" src="{{ userInfo.avatarUrl }}" alt=""/>
+        </div>
+      </li>
+      <li>
+        <input placeholder="请输入您的微信名称" name="user" bindinput="inputUser"/>
+      </li>
+      <li>
+        <input placeholder="请向相关人员获取密码" name="psd" bindinput="inputPwd"/>
+      </li>
+      <li bindtap="login">登录</li>
+    </ul>
+  </view>
